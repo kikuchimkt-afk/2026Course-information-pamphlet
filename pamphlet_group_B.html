@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中学生グループ指導コースのご案内 | ECCベストワン藍住・北島中央</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-deep: #6d5cae;
+            --forest-mid: #8b7cf6;
+            --forest-light: #b4a7f5;
+            --sage: #f5f3ff;
+            --sage-mid: #ede9fe;
+            --amber: #e88da2;
+            --amber-light: #f5a5b8;
+            --amber-bg: #fff5f7;
+            --text-main: #3d3852;
+            --text-sub: #7c7891;
+            --text-light: #a9a3bc;
+            --white: #ffffff;
+            --border: #e8e5f0;
+            --red-accent: #e88da2;
+            --blue-accent: #8b7cf6;
+            --purple-accent: #8b7cf6;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            color: var(--text-main);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ===== A4縦 印刷用 ===== */
+        @page {
+            size: A4 portrait;
+            margin: 10mm;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* ===== ページコンテナ ===== */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto 20px;
+            padding: 10mm 12mm;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        @media screen {
+            .page {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                margin: 20px auto;
+            }
+        }
+
+        /* ===== ヘッダー ===== */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--forest-deep);
+        }
+
+        .page-header .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 34px;
+            height: 34px;
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-light));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .logo-text h1 {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--forest-deep);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.58rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .header-badge {
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-mid));
+            color: white;
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.68rem;
+            font-weight: 700;
+        }
+
+        /* ===== セクションタイトル ===== */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .section-title .icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--amber), var(--amber-light));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .section-title h2 {
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--forest-deep);
+        }
+
+        /* ===== メインキャッチ ===== */
+        .main-catch {
+            background: linear-gradient(135deg, var(--forest-deep), #065f46);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 14px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-catch::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .main-catch .catch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--amber), var(--amber-light));
+            color: white;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 0.62rem;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .main-catch h2 {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        .main-catch h2 .highlight {
+            background: linear-gradient(135deg, var(--amber-light), var(--amber));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .main-catch p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.65rem;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        /* ===== コース構成図 ===== */
+        .course-structure {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 6px;
+            align-items: center;
+            margin-bottom: 14px;
+            padding: 10px 12px;
+            background: var(--sage);
+            border-radius: 10px;
+            border: 1.5px solid var(--sage-mid);
+        }
+
+        .course-box {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            border: 1.5px solid var(--border);
+        }
+
+        .course-box.individual {
+            border-color: var(--purple-accent);
+        }
+
+        .course-box.group {
+            border-color: var(--blue-accent);
+        }
+
+        .course-box.result {
+            border-color: var(--forest-light);
+            background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+        }
+
+        .course-box .box-label {
+            display: inline-block;
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 0.55rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2px;
+        }
+
+        .course-box.individual .box-label {
+            background: var(--purple-accent);
+        }
+
+        .course-box.group .box-label {
+            background: var(--blue-accent);
+        }
+
+        .course-box.result .box-label {
+            background: var(--forest-deep);
+        }
+
+        .course-box h4 {
+            font-size: 0.68rem;
+            font-weight: 800;
+            margin-bottom: 1px;
+        }
+
+        .course-box.individual h4 {
+            color: var(--purple-accent);
+        }
+
+        .course-box.group h4 {
+            color: var(--blue-accent);
+        }
+
+        .course-box.result h4 {
+            color: var(--forest-deep);
+        }
+
+        .course-box p {
+            font-size: 0.52rem;
+            color: var(--text-sub);
+            line-height: 1.25;
+        }
+
+        .course-connector {
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--forest-light);
+        }
+
+        /* ===== 5コースカード ===== */
+        .plans-row {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .plans-row.top {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .plans-row.bottom {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .plan-card {
+            border-radius: 10px;
+            padding: 12px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-total {
+            text-align: center;
+            margin-top: auto;
+            padding-top: 5px;
+            border-top: 2px solid;
+        }
+
+        .plan-card .grade-tag {
+            display: inline-block;
+            background: var(--forest-deep);
+            color: white;
+            padding: 1px 10px;
+            border-radius: 4px;
+            font-size: 0.55rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .plan-card .plan-num {
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: var(--text-sub);
+        }
+
+        .plan-card h3 {
+            font-size: 0.78rem;
+            font-weight: 900;
+            margin-bottom: 3px;
+            line-height: 1.2;
+        }
+
+        .plan-card .plan-desc {
+            font-size: 0.52rem;
+            color: var(--text-sub);
+            line-height: 1.35;
+            margin-bottom: 5px;
+            background: var(--white);
+            border-radius: 6px;
+            padding: 4px 6px;
+        }
+
+        .plan-price-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.55rem;
+            padding: 1px 0;
+        }
+
+        .plan-price-row .label {
+            color: var(--text-sub);
+        }
+
+        .plan-price-row .value {
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .plan-price-note {
+            font-size: 0.48rem;
+            color: var(--text-light);
+            margin-top: 2px;
+        }
+
+        .plan-total .total-amount {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+
+        .plan-total .total-unit {
+            font-size: 0.6rem;
+            font-weight: 600;
+            color: var(--text-sub);
+        }
+
+        /* カード色分け */
+        .plan-card.c1 {
+            background: linear-gradient(180deg, var(--sage), #f0fdf4);
+            border: 1.5px solid var(--forest-light);
+        }
+
+        .plan-card.c1 h3 {
+            color: var(--forest-deep);
+        }
+
+        .plan-card.c1 .plan-total {
+            border-color: var(--forest-deep);
+        }
+
+        .plan-card.c1 .total-amount {
+            color: var(--forest-deep);
+        }
+
+        .plan-card.c2 {
+            background: linear-gradient(180deg, #fff7ed, #fffbeb);
+            border: 2px solid var(--amber);
+        }
+
+        .plan-card.c2 h3 {
+            color: #92400e;
+        }
+
+        .plan-card.c2 .plan-total {
+            border-color: var(--amber);
+        }
+
+        .plan-card.c2 .total-amount {
+            color: #b45309;
+        }
+
+        .plan-card.c3 {
+            background: linear-gradient(180deg, var(--sage), #f0fdf4);
+            border: 1.5px solid var(--forest-light);
+        }
+
+        .plan-card.c3 h3 {
+            color: var(--forest-deep);
+        }
+
+        .plan-card.c3 .plan-total {
+            border-color: var(--forest-deep);
+        }
+
+        .plan-card.c3 .total-amount {
+            color: var(--forest-deep);
+        }
+
+        .plan-card.c4 {
+            background: linear-gradient(180deg, #fef3c7, #fff7ed);
+            border: 2px solid #b45309;
+        }
+
+        .plan-card.c4 h3 {
+            color: #78350f;
+        }
+
+        .plan-card.c4 .plan-total {
+            border-color: #b45309;
+        }
+
+        .plan-card.c4 .total-amount {
+            color: #92400e;
+        }
+
+        .plan-card.c5 {
+            background: linear-gradient(180deg, var(--sage), #f0fdf4);
+            border: 1.5px solid var(--forest-light);
+        }
+
+        .plan-card.c5 h3 {
+            color: var(--forest-deep);
+        }
+
+        .plan-card.c5 .plan-total {
+            border-color: var(--forest-deep);
+        }
+
+        .plan-card.c5 .total-amount {
+            color: var(--forest-deep);
+        }
+
+        .recommend-tag {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background: linear-gradient(135deg, var(--amber), #b45309);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 0 10px 0 10px;
+            font-size: 0.55rem;
+            font-weight: 800;
+        }
+
+        .commit-tag {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            background: linear-gradient(135deg, var(--red-accent), #b91c1c);
+            color: white;
+            padding: 2px 10px;
+            border-radius: 0 10px 0 10px;
+            font-size: 0.55rem;
+            font-weight: 800;
+        }
+
+        /* ===== 特典ハイライト ===== */
+        .benefits-highlight {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .benefit-box {
+            border-radius: 10px;
+            padding: 10px 12px;
+            position: relative;
+        }
+
+        .benefit-box .benefit-badge {
+            position: absolute;
+            top: -7px;
+            left: 10px;
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 0.52rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .benefit-box.guarantee {
+            background: linear-gradient(135deg, #fef3c7, #fff7ed);
+            border: 1.5px solid var(--amber);
+        }
+
+        .benefit-box.guarantee .benefit-badge {
+            background: linear-gradient(135deg, var(--amber), #b45309);
+        }
+
+        .benefit-box.exam {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1.5px solid var(--blue-accent);
+        }
+
+        .benefit-box.exam .benefit-badge {
+            background: linear-gradient(135deg, var(--blue-accent), #1d4ed8);
+        }
+
+        .benefit-box h4 {
+            font-size: 0.65rem;
+            font-weight: 800;
+            margin-top: 3px;
+            margin-bottom: 2px;
+        }
+
+        .benefit-box.guarantee h4 {
+            color: #92400e;
+        }
+
+        .benefit-box.exam h4 {
+            color: #1e3a5f;
+        }
+
+        .benefit-box p {
+            font-size: 0.52rem;
+            color: var(--text-sub);
+            line-height: 1.3;
+        }
+
+        .benefit-box .benefit-value {
+            font-size: 0.72rem;
+            font-weight: 900;
+            margin-top: 2px;
+        }
+
+        .benefit-box.guarantee .benefit-value {
+            color: var(--red-accent);
+        }
+
+        .benefit-box.exam .benefit-value {
+            color: var(--blue-accent);
+        }
+
+        /* ===== 注意ボックス ===== */
+        .note-box {
+            background: var(--amber-bg);
+            border-left: 3px solid var(--amber);
+            border-radius: 0 8px 8px 0;
+            padding: 5px 10px;
+            font-size: 0.55rem;
+            color: var(--text-sub);
+            margin-top: 10px;
+        }
+
+        .note-box strong {
+            color: var(--amber);
+        }
+
+        /* ===== フッター ===== */
+        .page-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            padding-top: 6px;
+            border-top: 1.5px solid var(--border);
+            font-size: 0.58rem;
+            color: var(--text-sub);
+        }
+
+        .page-footer .contact {
+            display: flex;
+            gap: 14px;
+        }
+
+        .page-footer .contact span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* ===== Page2 ===== */
+        .guarantee-detail {
+            background: linear-gradient(135deg, #fef3c7, #fffbeb);
+            border: 2px solid var(--amber);
+            border-radius: 10px;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .guarantee-detail h3 {
+            font-size: 0.78rem;
+            font-weight: 800;
+            color: #92400e;
+            margin-bottom: 4px;
+        }
+
+        .criteria-card {
+            background: var(--white);
+            border-radius: 6px;
+            padding: 6px 8px;
+            text-align: center;
+        }
+
+        .criteria-card .criteria-label {
+            font-size: 0.58rem;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        .criteria-card .criteria-value {
+            font-size: 0.82rem;
+            font-weight: 900;
+            color: var(--red-accent);
+        }
+
+        .guarantee-flow {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+            gap: 3px;
+            align-items: center;
+        }
+
+        .flow-step {
+            text-align: center;
+            background: var(--white);
+            border-radius: 6px;
+            padding: 4px 3px;
+        }
+
+        .flow-step .step-num {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: var(--amber);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.52rem;
+            font-weight: 800;
+            line-height: 16px;
+            margin-bottom: 1px;
+        }
+
+        .flow-step .step-text {
+            font-size: 0.48rem;
+            font-weight: 600;
+            color: #92400e;
+            line-height: 1.15;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: var(--amber);
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        /* グループ指導3本柱 */
+        .group-pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .pillar-card {
+            background: linear-gradient(135deg, var(--white), #eff6ff);
+            border: 1.5px solid #dbeafe;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .pillar-card .pillar-icon {
+            font-size: 18px;
+            margin-bottom: 2px;
+        }
+
+        .pillar-card h4 {
+            font-size: 0.62rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin-bottom: 1px;
+        }
+
+        .pillar-card p {
+            font-size: 0.50rem;
+            color: var(--text-sub);
+            line-height: 1.25;
+        }
+
+        /* 全国模試詳細 */
+        .exam-detail {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border: 1.5px solid var(--blue-accent);
+            border-radius: 10px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+        }
+
+        .exam-detail h3 {
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #1e3a5f;
+            margin-bottom: 3px;
+        }
+
+        .exam-merits {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin-top: 4px;
+        }
+
+        .exam-merit-item {
+            background: var(--white);
+            border-radius: 5px;
+            padding: 4px 5px;
+            text-align: center;
+            font-size: 0.50rem;
+            font-weight: 600;
+            color: #1e3a5f;
+        }
+
+        .exam-merit-item .merit-emoji {
+            font-size: 12px;
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        /* メリットカード */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, var(--white), var(--sage));
+            border: 1.5px solid var(--sage-mid);
+            border-radius: 8px;
+            padding: 6px;
+            text-align: center;
+        }
+
+        .benefit-card .benefit-icon {
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .benefit-card h4 {
+            font-size: 0.55rem;
+            font-weight: 700;
+            color: var(--forest-deep);
+            margin-bottom: 1px;
+        }
+
+        .benefit-card p {
+            font-size: 0.48rem;
+            color: var(--text-sub);
+            line-height: 1.2;
+        }
+
+        /* 比較テーブル */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(6, 78, 59, 0.08);
+        }
+
+        .comparison-table thead th {
+            background: var(--forest-deep);
+            color: white;
+            padding: 4px 6px;
+            font-size: 0.55rem;
+            font-weight: 700;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table tbody td {
+            padding: 3px 6px;
+            font-size: 0.58rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--forest-deep);
+        }
+
+        .comparison-table tbody tr {
+            background: var(--sage);
+        }
+
+        .new-price {
+            color: var(--forest-deep);
+            font-weight: 800;
+            font-size: 0.65rem;
+        }
+
+        /* ユーティリティ */
+        .mt-2 {
+            margin-top: 6px;
+        }
+
+        .mt-3 {
+            margin-top: 10px;
+        }
+
+        /* 印刷ボタン */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-light));
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(6, 78, 59, 0.3);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 印刷ボタン -->
+    <button class="print-btn no-print" onclick="window.print()">🖨️ PDF出力 / 印刷</button>
+
+    <!-- ===== ページ1: メイン訴求 + 5コース料金 ===== -->
+    <div class="page" id="page1">
+
+        <!-- ヘッダー -->
+        <div class="page-header">
+            <div class="logo-area">
+                <div class="logo-icon">ECC</div>
+                <div class="logo-text">
+                    <h1>お子さまの未来を一緒に応援します</h1>
+                    <p>ECCベストワン 藍住校・北島中央校</p>
+                </div>
+            </div>
+            <div class="header-badge">2026年4月〜 開講</div>
+        </div>
+
+        <!-- メインキャッチ -->
+        <div class="main-catch" style="background: linear-gradient(135deg, #6d5cae, #8b7cf6);">
+            <span class="catch-badge" style="background: linear-gradient(135deg, #e88da2, #f5a5b8);">🤝 お子さまに寄り添う
+                個別×グループ</span>
+            <h2>「うちの子、<span class="highlight" style="color: #fce4ec;">５教科どうしよう…</span>」<br>そのお悩み、私たちが解決します。</h2>
+            <p>苦手な科目は個別でじっくり。残りの教科はグループで楽しく演習。お子さまのペースに合わせた学習で、無理なく5教科をカバーします。</p>
+        </div>
+
+        <!-- アピールバッジ -->
+        <div style="display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+            <span
+                style="background: linear-gradient(135deg, #6d5cae, #8b7cf6); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.55rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">
+                🌟 基礎学対策もお任せください
+            </span>
+            <span
+                style="background: linear-gradient(135deg, #6bb8a3, #8cd4bf); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.55rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">
+                📊 全国模試1年分がなんと無料
+            </span>
+            <span
+                style="background: linear-gradient(135deg, #e88da2, #f5a5b8); color: white; padding: 3px 12px; border-radius: 20px; font-size: 0.55rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px;">
+                📱 オリジナルアプリで楽しく学べる
+            </span>
+        </div>
+
+        <!-- コース構成図 -->
+        <div class="course-structure">
+            <div class="course-box individual">
+                <span class="box-label">個別指導</span>
+                <h4>週1〜3コマ</h4>
+                <p>苦手教科を<br>1対1〜2で徹底強化</p>
+            </div>
+            <div class="course-connector">＋</div>
+            <div class="course-box group">
+                <span class="box-label">グループ指導</span>
+                <h4>週3回</h4>
+                <p>演習指導・全国模試<br>基礎学対策教材で5教科カバー</p>
+            </div>
+            <div class="course-connector">＝</div>
+            <div class="course-box result">
+                <span class="box-label">成果</span>
+                <h4>5教科対応</h4>
+                <p>定期テスト＆入試の<br>総合力を養成</p>
+            </div>
+        </div>
+
+        <!-- 6コース料金カード -->
+        <div class="section-title">
+            <div class="icon">📊</div>
+            <h2>全6コース — お子さまの目標に合わせて選べます</h2>
+        </div>
+
+        <!-- 上段: 中1・中2向け ①②-A②-B -->
+        <div class="plans-row top">
+            <!-- ① 標準・定期テスト対策 -->
+            <div class="plan-card c1">
+                <span
+                    style="position:absolute;top:-1px;right:-1px;background:linear-gradient(135deg,var(--forest-deep),var(--forest-light));color:white;padding:2px 10px;border-radius:0 10px 0 10px;font-size:0.52rem;font-weight:700;">個別スタンダード</span>
+                <span class="grade-tag">中1・中2</span>
+                <h3>標準・定期テスト対策</h3>
+                <div class="plan-desc">主要2教科（英・数）を確実に。公立・私立問わず学内順位を安定させる基本プラン。</div>
+                <div class="plan-price-row">
+                    <span class="label">授業料（週2）</span>
+                    <span class="value">¥33,400</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">学習サポート費（中1・2）</span>
+                    <span class="value">¥4,598</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: var(--forest-deep);">¥41,598</span><span
+                        class="total-unit">/月</span>
+                </div>
+            </div>
+
+            <!-- ② 5教科完全攻略パッケージ -->
+            <div class="plan-card c2">
+                <span class="recommend-tag">最推奨：戦略案B</span>
+                <span class="grade-tag">中1・中2</span>
+                <h3>5教科完全攻略パッケージ</h3>
+                <div class="plan-desc">個別の丁寧さと、集団の演習量を両立。都心部大手塾に負けない「5教科網羅」を実現。</div>
+                <div class="plan-price-row">
+                    <span class="label">個別指導（週1）</span>
+                    <span class="value">¥16,700</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">グループ指導パック*</span>
+                    <span class="value">¥27,588</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-price-note">*演習指導・全国模試・基礎学対策教材込</div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: #b45309;">¥47,888</span><span class="total-unit">/月</span>
+                </div>
+            </div>
+
+            <!-- ②-B 5教科完全攻略＋個別強化 -->
+            <div class="plan-card c2" style="border-color: #b45309;">
+                <span class="grade-tag">中1・中2</span>
+                <h3>5教科攻略＋個別強化</h3>
+                <div class="plan-desc">個別2コマで英数を徹底強化しつつ、グループで5教科網羅。最も手厚い中1-2向けプラン。</div>
+                <div class="plan-price-row">
+                    <span class="label">個別指導（週2）</span>
+                    <span class="value">¥33,400</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">グループ指導パック*</span>
+                    <span class="value">¥27,588</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-price-note">*演習指導・全国模試・基礎学対策教材込</div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: #b45309;">¥64,588</span><span class="total-unit">/月</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下段: 中3向け ③④⑤ -->
+        <div class="plans-row bottom" style="grid-template-columns: repeat(3, 1fr);">
+            <!-- ③ 受験スタンダード -->
+            <div class="plan-card c3">
+                <span
+                    style="position:absolute;top:-1px;right:-1px;background:linear-gradient(135deg,var(--forest-deep),var(--forest-light));color:white;padding:2px 10px;border-radius:0 10px 0 10px;font-size:0.52rem;font-weight:700;">個別スタンダード</span>
+                <span class="grade-tag">中3</span>
+                <h3>受験スタンダード</h3>
+                <div class="plan-desc">志望校合格に向けた主要教科の徹底強化。夏以降の追い込みに対応する標準構成。</div>
+                <div class="plan-price-row">
+                    <span class="label">授業料（週2）</span>
+                    <span class="value">¥35,090</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">学習サポート費（中3）</span>
+                    <span class="value">¥4,840</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: var(--forest-deep);">¥43,530</span><span
+                        class="total-unit">/月</span>
+                </div>
+            </div>
+            <!-- ④ 5教科攻略パッケージ -->
+            <div class="plan-card c2">
+                <span class="recommend-tag">最推奨：戦略案B</span>
+                <span class="grade-tag">中3</span>
+                <h3>5教科攻略パッケージ</h3>
+                <div class="plan-desc">個別週１で英数の弱点を潰し、グループで5教科演習カバー。コスパ重視の受験対策。</div>
+                <div class="plan-price-row">
+                    <span class="label">個別指導（週1）</span>
+                    <span class="value">¥17,545</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">グループ演習パック*</span>
+                    <span class="value">¥29,040</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-price-note">*演習指導・全国模試・基礎学対策教材込</div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: #b45309;">¥50,185</span><span class="total-unit">/月</span>
+                </div>
+            </div>
+            <!-- ⑤ プレミアム・最難関校対策 -->
+            <div class="plan-card c4">
+                <span class="commit-tag">合格徹底サポート</span>
+                <span class="grade-tag">中3</span>
+                <h3>プレミアム・最難関校対策</h3>
+                <div class="plan-desc">上位校狙いのマストアイテム。個別での弱点克服とグループでのハイレベル演習。</div>
+                <div class="plan-price-row">
+                    <span class="label">個別指導（週2）</span>
+                    <span class="value">¥35,090</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">グループ演習パック*</span>
+                    <span class="value">¥29,040</span>
+                </div>
+                <div class="plan-price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="plan-price-note">*演習指導・全国模試・基礎学対策教材込</div>
+                <div class="plan-total">
+                    <span class="total-amount" style="color: #92400e;">¥67,730</span><span class="total-unit">/月</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 付帯特典ハイライト -->
+        <div class="benefits-highlight">
+            <div class="benefit-box guarantee">
+                <span class="benefit-badge">🎯 付帯特典①</span>
+                <h4>成績アップ保証（1教科限定）</h4>
+                <p>保証対象の1教科に集中。半年後の全国模試で未達成なら<strong>2ヶ月間授業料無料。</strong></p>
+                <div class="benefit-value">平均未満→20点UP / 平均以上→10点UP</div>
+            </div>
+            <div class="benefit-box exam">
+                <span class="benefit-badge">📊 付帯特典②</span>
+                <h4>全国模試 年間受験 無料</h4>
+                <p>年10回の全国模試が受講費に含まれます。偏差値・志望校判定（中3）で実力を可視化。</p>
+                <div class="benefit-value">年間¥21,000相当 → 無料</div>
+            </div>
+        </div>
+
+        <div class="note-box">
+            <strong>📌</strong> 成績アップ保証は、個別指導・グループ指導ともに同一の1教科に絞って受講する場合に適用。個別2コマの場合は、いずれか1教科が対象となります。
+        </div>
+
+        <!-- 基礎学対策パネル -->
+        <div
+            style="margin-top: 12px; background: linear-gradient(135deg, #f5f3ff, #fce4ec); border: 2px solid #ede9fe; border-radius: 16px; padding: 14px 16px; position: relative; overflow: hidden;">
+            <div
+                style="position: absolute; top: -15px; right: -15px; width: 60px; height: 60px; background: rgba(139,124,246,0.08); border-radius: 50%;">
+            </div>
+            <div
+                style="position: absolute; bottom: -10px; left: -10px; width: 40px; height: 40px; background: rgba(232,141,162,0.08); border-radius: 50%;">
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                <span
+                    style="background: linear-gradient(135deg, #8b7cf6, #b4a7f5); padding: 3px 12px; border-radius: 20px; font-size: 0.55rem; font-weight: 800; color: white;">🌱
+                    お子さまの成長をサポート</span>
+                <span style="font-size: 0.68rem; font-weight: 800; color: #6d5cae;">グループ指導で基礎学対策も安心</span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div
+                    style="background: white; border-radius: 12px; padding: 10px 12px; border: 1.5px solid #ede9fe; box-shadow: 0 2px 8px rgba(109,92,174,0.06);">
+                    <p style="font-size: 0.56rem; font-weight: 700; color: #6d5cae; margin: 0 0 4px 0;">📱 お子さま専用の学習アプリ
+                    </p>
+                    <p style="font-size: 0.48rem; color: #5a5470; line-height: 1.5; margin: 0;">
+                        過去問を分析して作った当校オリジナルアプリです。<strong
+                            style="color: #6d5cae;">お子さまの苦手なところだけ</strong>を集中的に練習できるので、効率よく伸びていきます。
+                    </p>
+                </div>
+                <div
+                    style="background: white; border-radius: 12px; padding: 10px 12px; border: 1.5px solid #fce4ec; box-shadow: 0 2px 8px rgba(232,141,162,0.06);">
+                    <p style="font-size: 0.56rem; font-weight: 700; color: #e88da2; margin: 0 0 4px 0;">🎯
+                        基礎学から入試まで安心のサポート
+                    </p>
+                    <p style="font-size: 0.48rem; color: #5a5470; line-height: 1.5; margin: 0;">
+                        「基礎学って定期テストと何が違うの？」そんな不安にもお応えします。基礎学から入試まで、<strong
+                            style="color: #6d5cae;">つながりのあるカリキュラム</strong>で着実に力をつけていきます。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="page-footer">
+            <span>© 2026 ECCベストワン藍住・北島中央　※記載の料金はすべて税込です。</span>
+            <div class="contact">
+                <span>📍 藍住校・北島中央校</span>
+                <span>📞 お問い合わせは各校舎まで</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ページ2: 詳細説明 ===== -->
+    <div class="page" id="page2">
+
+        <!-- ヘッダー -->
+        <div class="page-header">
+            <div class="logo-area">
+                <div class="logo-icon">ECC</div>
+                <div class="logo-text">
+                    <h1>中学生コースのご案内</h1>
+                    <p>ECCベストワン 藍住校・北島中央校</p>
+                </div>
+            </div>
+            <div class="header-badge">詳細のご説明</div>
+        </div>
+
+        <!-- 成績アップ保証詳細 -->
+        <div class="section-title">
+            <div class="icon">🎯</div>
+            <h2>成績アップ保証 — 結果に責任を持つ塾です</h2>
+        </div>
+
+        <div class="guarantee-detail">
+            <h3>半年後、成績が上がらなければ2ヶ月間授業料無料</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 6px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+                    <div class="criteria-card">
+                        <div class="criteria-label">平均点未満の方</div>
+                        <div class="criteria-value">20点UP保証</div>
+                    </div>
+                    <div class="criteria-card">
+                        <div class="criteria-label">平均点以上の方</div>
+                        <div class="criteria-value">10点UP保証</div>
+                    </div>
+                </div>
+                <div style="background: var(--white); border-radius: 6px; padding: 6px 8px;">
+                    <p style="font-size: 0.58rem; color: var(--text-main); line-height: 1.45; margin: 0;">
+                        個別指導・グループ指導ともに<strong>同一の1教科に絞って受講</strong>することが条件です。
+                        個別2コマの場合は、いずれか1教科が保証対象となります。
+                        入塾時に全国模試を受験し、<strong>半年後の同一基準テストで成長を測定</strong>。
+                        目標未達成の場合は<strong style="color: var(--red-accent);">その先2ヶ月間の授業料が無料</strong>になります。
+                        <br><span style="font-size: 0.50rem; color: var(--text-sub);">※詳細条件は面談時にご説明します。</span>
+                    </p>
+                </div>
+            </div>
+            <div class="guarantee-flow">
+                <div class="flow-step"><span class="step-num">1</span>
+                    <div class="step-text">全国模試<br>受験</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><span class="step-num">2</span>
+                    <div class="step-text">個別計画<br>作成</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><span class="step-num">3</span>
+                    <div class="step-text">半年間<br>徹底指導</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><span class="step-num">4</span>
+                    <div class="step-text">再テスト<br>成果確認</div>
+                </div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><span class="step-num">5</span>
+                    <div class="step-text">保証判定<br>実施</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- グループ指導の内容 -->
+        <div class="section-title">
+            <div class="icon">👥</div>
+            <h2>グループ指導パック（週3回）で何をするか — 3つの柱</h2>
+        </div>
+
+        <div class="group-pillars">
+            <div class="pillar-card">
+                <div class="pillar-icon">📝</div>
+                <h4>演習指導</h4>
+                <p>個別指導で学んだ内容を演習で定着。5教科の宿題管理・テスト対策も実施。</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">📊</div>
+                <h4>全国模試（年10回）</h4>
+                <p>年間¥21,000相当が無料。<br>学校の実力テスト（年3〜4回）では不十分。<br>中1・2のうちから全国基準で立ち位置を把握。</p>
+            </div>
+            <div class="pillar-card">
+                <div class="pillar-icon">📱</div>
+                <h4>基礎学対策教材</h4>
+                <p>過去問を徹底分析した自社開発アプリで、苦手単元をピンポイント強化。徳島県特化の実戦演習が可能。</p>
+            </div>
+        </div>
+
+        <!-- 全国模試の詳細 -->
+        <div class="exam-detail mt-3">
+            <h3>📊 全国模試 年間¥21,000相当 — グループ指導生は無料</h3>
+            <p style="font-size: 0.55rem; color: var(--text-sub); line-height: 1.35; margin-bottom: 4px;">
+                通常1回¥2,100 × 年10回 = ¥21,000相当の全国模試が、グループ指導パック生は<strong
+                    style="color: var(--blue-accent);">受講費に含まれています</strong>。
+                学校の実力テストは年3〜4回程度で、<strong style="color: var(--text-main);">実戦力の養成には不十分</strong>です。
+                <strong
+                    style="color: var(--text-main);">中1・中2のうちから年10回の模試で全国レベルの立ち位置を把握</strong>し、早期に弱点を発見・対策することが受験本番での差につながります。
+            </p>
+            <div class="exam-merits">
+                <div class="exam-merit-item"><span class="merit-emoji">🏆</span>全国偏差値・順位</div>
+                <div class="exam-merit-item"><span class="merit-emoji">🎯</span>志望校判定（中3のみ）</div>
+                <div class="exam-merit-item"><span class="merit-emoji">📈</span>成績推移グラフ</div>
+                <div class="exam-merit-item"><span class="merit-emoji">🔍</span>単元別弱点分析</div>
+            </div>
+        </div>
+
+        <!-- 基礎学力テスト対策 -->
+        <div class="section-title">
+            <div class="icon">⚠️</div>
+            <h2>徳島県「基礎学力テスト」— 定期テスト対策だけでは太刀打ちできません</h2>
+        </div>
+
+        <div
+            style="background: linear-gradient(135deg, #fef2f2, #fff5f5); border: 2px solid #ef4444; border-radius: 10px; padding: 10px 12px; margin-bottom: 8px;">
+            <p style="font-size: 0.62rem; font-weight: 700; color: #dc2626; margin: 0 0 4px 0; text-align: center;">
+                🚨 中3の10月・11月・1月 — この3回が志望校を決める
+            </p>
+            <p style="font-size: 0.52rem; color: var(--text-main); line-height: 1.5; margin: 0;">
+                徳島県の高校受験で最も重要な「基礎学力テスト」。<strong>内申点と並び、志望校出願の可否を左右する決定的なテスト</strong>です。
+                しかし、学校の定期テストとはまったく別物。<strong>教科書の丸暗記では歯が立たない「活用力・思考力」</strong>が問われます。
+                普段の定期テスト対策の延長では、本番で大きく失点するリスクがあります。
+            </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 8px;">
+            <div
+                style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-radius: 8px; padding: 8px 10px; border: 1.5px solid var(--forest-light);">
+                <p style="font-size: 0.58rem; font-weight: 700; color: var(--forest-deep); margin: 0 0 4px 0;">
+                    📱 自社開発「基礎学対策アプリ」
+                </p>
+                <p style="font-size: 0.50rem; color: var(--text-main); line-height: 1.4; margin: 0;">
+                    過去の基礎学力テストを徹底分析し、<strong>頻出パターン・出題傾向を網羅した専用教材</strong>を自社開発。
+                    市販教材や他塾のプリントでは対応できない<strong>徳島県特化の実戦演習</strong>が可能です。
+                </p>
+            </div>
+            <div
+                style="background: linear-gradient(135deg, #fef3c7, #fffbeb); border-radius: 8px; padding: 8px 10px; border: 1.5px solid var(--amber);">
+                <p style="font-size: 0.58rem; font-weight: 700; color: #b45309; margin: 0 0 4px 0;">
+                    🎯 基礎学→入試 一貫の実戦演習
+                </p>
+                <p style="font-size: 0.50rem; color: var(--text-main); line-height: 1.4; margin: 0;">
+                    基礎学力テストと入試本番は<strong>出題形式が直結</strong>しています。
+                    グループ指導では、基礎学の得点力をそのまま入試本番の得点力に変換する<strong>一貫した演習カリキュラム</strong>を実施。
+                </p>
+            </div>
+        </div>
+
+        <div style="background: var(--sage); border-radius: 8px; padding: 8px 10px; text-align: center;">
+            <p style="font-size: 0.60rem; font-weight: 700; color: #dc2626; margin: 0 0 3px 0;">
+                ⚡ 他塾にはない、ECCベストワンだけの基礎学対策
+            </p>
+            <p style="font-size: 0.50rem; color: var(--text-main); line-height: 1.4; margin: 0;">
+                大手塾の「全国共通カリキュラム」では徳島県特有の出題傾向に対応できません。
+                地域密着だからこそ実現する<strong>「基礎学専用×入試直結」の対策</strong>が、お子様の志望校合格を確実にします。
+            </p>
+        </div>
+
+        <!-- まとめ比較表 -->
+        <div class="section-title">
+            <div class="icon">📋</div>
+            <h2>全6コース 料金一覧（中学生）</h2>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>学年</th>
+                    <th>コース</th>
+                    <th>内容</th>
+                    <th>月額合計</th>
+                    <th>特徴</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">中1・中2</td>
+                    <td>標準・定期テスト</td>
+                    <td>個別 週2</td>
+                    <td class="new-price">¥41,598</td>
+                    <td style="font-size: 0.50rem;">英数の基礎安定</td>
+                </tr>
+                <tr>
+                    <td style="color: #b45309; font-weight: 700;">5教科攻略</td>
+                    <td style="color: #b45309; font-weight: 700;">個別 週1＋グループ週3</td>
+                    <td class="new-price" style="color: #b45309;">¥47,888</td>
+                    <td style="font-size: 0.50rem; color: #b45309; font-weight: 700;">★ 最推奨</td>
+                </tr>
+                <tr>
+                    <td style="color: #b45309; font-weight: 700;">攻略＋個別強化</td>
+                    <td style="color: #b45309; font-weight: 700;">個別 週2＋グループ週3</td>
+                    <td class="new-price" style="color: #b45309;">¥64,588</td>
+                    <td style="font-size: 0.50rem; color: #b45309; font-weight: 700;">英数強化＋5教科</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">中3</td>
+                    <td>受験スタンダード</td>
+                    <td>個別 週2</td>
+                    <td class="new-price">¥43,530</td>
+                    <td style="font-size: 0.50rem;">主要教科の強化</td>
+                </tr>
+                <tr>
+                    <td style="color: #b45309; font-weight: 700;">5教科攻略</td>
+                    <td style="color: #b45309; font-weight: 700;">個別 週1＋グループ週3</td>
+                    <td class="new-price" style="color: #b45309;">¥50,185</td>
+                    <td style="font-size: 0.50rem; color: #b45309; font-weight: 700;">★ 最推奨</td>
+                </tr>
+                <tr>
+                    <td style="color: #78350f; font-weight: 700;">プレミアム</td>
+                    <td style="color: #78350f; font-weight: 700;">個別 週2＋グループ週3</td>
+                    <td class="new-price" style="color: #92400e;">¥67,730</td>
+                    <td style="font-size: 0.50rem; color: #78350f; font-weight: 700;">最難関校対策</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="note-box mt-2">
+            <strong>📌 ポイント：</strong>
+            グループ指導パックには、基礎学対策教材・全国模試受験料（年間¥21,000相当）が含まれています。
+            成績アップ保証は全コース共通で、同一1教科に絞って受講する場合に適用されます。
+        </div>
+
+        <!-- フッター -->
+        <div class="page-footer">
+            <span>© 2026 ECCベストワン藍住・北島中央　※記載の料金はすべて税込です。</span>
+            <div class="contact">
+                <span>📍 藍住校・北島中央校</span>
+                <span>📞 お問い合わせは各校舎まで</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026年度 新授業料のご案内 | ECCベストワン藍住・北島中央</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800;900&family=Inter:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --forest-deep: #064e3b;
+            --forest-mid: #065f46;
+            --forest-light: #10b981;
+            --sage: #ecfdf5;
+            --sage-mid: #d1fae5;
+            --amber: #d97706;
+            --amber-light: #fbbf24;
+            --amber-bg: #fffbeb;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --text-light: #94a3b8;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --red-accent: #ef4444;
+            --blue-accent: #3b82f6;
+            --purple-accent: #8b5cf6;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            color: var(--text-main);
+            background: var(--white);
+            line-height: 1.6;
+        }
+
+        /* ===== A4縦 印刷用 ===== */
+        @page {
+            size: A4 portrait;
+            margin: 10mm;
+        }
+
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page {
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* ===== ページコンテナ ===== */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto 20px;
+            padding: 12mm 14mm;
+            background: var(--white);
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        @media screen {
+            .page {
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                margin: 20px auto;
+            }
+        }
+
+
+
+        /* ===== ヘッダー ===== */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--forest-deep);
+        }
+
+        .page-header .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .logo-text h1 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--forest-deep);
+            line-height: 1.2;
+        }
+
+        .logo-text p {
+            font-size: 0.62rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .header-badge {
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-mid));
+            color: white;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== セクションタイトル ===== */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .section-title .icon {
+            width: 26px;
+            height: 26px;
+            background: linear-gradient(135deg, var(--amber), var(--amber-light));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+        }
+
+        .section-title h2 {
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--forest-deep);
+        }
+
+        /* ===== 料金比較テーブル ===== */
+        .comparison-table-wrapper {
+            margin-bottom: 10px;
+        }
+
+        .grade-label {
+            display: inline-block;
+            background: var(--forest-deep);
+            color: white;
+            padding: 3px 14px;
+            border-radius: 20px 20px 0 0;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: -1px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(6, 78, 59, 0.08);
+        }
+
+        .comparison-table thead th {
+            background: var(--forest-deep);
+            color: white;
+            padding: 6px 10px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .comparison-table thead th:first-child {
+            text-align: left;
+        }
+
+        .comparison-table tbody td {
+            padding: 5px 10px;
+            font-size: 0.72rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comparison-table tbody td:first-child {
+            text-align: left;
+            font-weight: 600;
+            color: var(--forest-deep);
+        }
+
+        .comparison-table tbody tr {
+            background: var(--sage);
+        }
+
+        .old-price {
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .new-price {
+            color: var(--forest-deep);
+            font-weight: 800;
+            font-size: 0.82rem;
+        }
+
+        .diff-price {
+            color: var(--red-accent);
+            font-weight: 700;
+            font-size: 0.68rem;
+        }
+
+        .diff-price::before {
+            content: '▲';
+            font-size: 0.55rem;
+            margin-right: 2px;
+        }
+
+        /* ===== フローチャート矢印 ===== */
+        .flow-section {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 15px;
+            align-items: stretch;
+            margin-bottom: 18px;
+        }
+
+        .flow-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--amber);
+            font-weight: 800;
+        }
+
+        .flow-card {
+            border-radius: 16px;
+            padding: 16px 20px;
+            position: relative;
+        }
+
+        .flow-card.old {
+            background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+            border: 2px solid var(--border);
+        }
+
+        .flow-card.new {
+            background: linear-gradient(135deg, var(--sage), #d1fae5);
+            border: 2px solid var(--forest-light);
+        }
+
+        .flow-card h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .flow-card.old h3 {
+            color: var(--text-sub);
+        }
+
+        .flow-card.new h3 {
+            color: var(--forest-deep);
+        }
+
+        .flow-card .big-price {
+            font-size: 1.9rem;
+            font-weight: 900;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .flow-card.old .big-price {
+            color: var(--text-sub);
+            text-decoration: line-through;
+            text-decoration-color: var(--red-accent);
+        }
+
+        .flow-card.new .big-price {
+            color: var(--forest-deep);
+        }
+
+        .flow-card .sub-text {
+            font-size: 0.72rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+        }
+
+        /* ===== メリットカード ===== */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .benefit-card {
+            background: linear-gradient(135deg, var(--white), var(--sage));
+            border: 1.5px solid var(--sage-mid);
+            border-radius: 12px;
+            padding: 10px 10px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(6, 78, 59, 0.10);
+        }
+
+        .benefit-card .benefit-icon {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto 5px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .benefit-card:nth-child(1) .benefit-icon {
+            background: linear-gradient(135deg, #dbeafe, #93c5fd);
+        }
+
+        .benefit-card:nth-child(2) .benefit-icon {
+            background: linear-gradient(135deg, #fef3c7, #fbbf24);
+        }
+
+        .benefit-card:nth-child(3) .benefit-icon {
+            background: linear-gradient(135deg, #ede9fe, #a78bfa);
+        }
+
+        .benefit-card:nth-child(4) .benefit-icon {
+            background: linear-gradient(135deg, #ecfdf5, #34d399);
+        }
+
+        .benefit-card h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--forest-deep);
+            margin-bottom: 2px;
+        }
+
+        .benefit-card p {
+            font-size: 0.6rem;
+            color: var(--text-sub);
+            line-height: 1.35;
+        }
+
+        /* ===== 注意ボックス ===== */
+        .note-box {
+            background: var(--amber-bg);
+            border-left: 3px solid var(--amber);
+            border-radius: 0 8px 8px 0;
+            padding: 6px 12px;
+            font-size: 0.62rem;
+            color: var(--text-sub);
+            margin-top: 8px;
+        }
+
+        .note-box strong {
+            color: var(--amber);
+        }
+
+        /* ===== 週１コマ特別セクション ===== */
+        .weekly1-highlight {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border: 2px solid var(--amber);
+            border-radius: 12px;
+            padding: 10px 12px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        .weekly1-highlight::before {
+            content: '★ 週１コマの方へ特別なご案内 ★';
+            position: absolute;
+            top: -10px;
+            left: 14px;
+            background: linear-gradient(135deg, var(--amber), #f59e0b);
+            color: white;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.62rem;
+            font-weight: 800;
+        }
+
+        .weekly1-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 4px;
+            align-items: start;
+        }
+
+        .weekly1-desc h3 {
+            font-size: 0.78rem;
+            color: var(--forest-deep);
+            font-weight: 800;
+            margin-bottom: 3px;
+        }
+
+        .weekly1-desc p {
+            font-size: 0.6rem;
+            color: var(--text-sub);
+            line-height: 1.35;
+        }
+
+        .weekly1-merits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+
+        .weekly1-merit-item {
+            background: var(--white);
+            border-radius: 6px;
+            padding: 4px 6px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.58rem;
+            font-weight: 600;
+            color: var(--forest-deep);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .weekly1-merit-item .merit-emoji {
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+
+        /* ===== チャートマップ（フロー） ===== */
+        .chart-map {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        .chart-col {
+            border-radius: 16px;
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chart-col.col-1 {
+            background: linear-gradient(180deg, #fef3c7, #fffbeb);
+            border: 2px solid var(--amber);
+        }
+
+        .chart-col.col-2 {
+            background: linear-gradient(180deg, var(--sage-mid), var(--sage));
+            border: 2px solid var(--forest-light);
+        }
+
+        .chart-col.col-3 {
+            background: linear-gradient(180deg, #e0e7ff, #eef2ff);
+            border: 2px solid var(--blue-accent);
+        }
+
+        .chart-col-header {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed;
+            margin-bottom: 10px;
+        }
+
+        .chart-col.col-1 .chart-col-header {
+            border-color: var(--amber-light);
+        }
+
+        .chart-col.col-2 .chart-col-header {
+            border-color: var(--forest-light);
+        }
+
+        .chart-col.col-3 .chart-col-header {
+            border-color: var(--blue-accent);
+        }
+
+        .chart-col-header h3 {
+            font-size: 1rem;
+            font-weight: 900;
+        }
+
+        .chart-col.col-1 .chart-col-header h3 {
+            color: var(--amber);
+        }
+
+        .chart-col.col-2 .chart-col-header h3 {
+            color: var(--forest-deep);
+        }
+
+        .chart-col.col-3 .chart-col-header h3 {
+            color: var(--blue-accent);
+        }
+
+        .chart-col-header .col-badge {
+            display: inline-block;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .chart-col.col-1 .col-badge {
+            background: var(--amber);
+            color: white;
+        }
+
+        .chart-col.col-2 .col-badge {
+            background: var(--forest-deep);
+            color: white;
+        }
+
+        .chart-col.col-3 .col-badge {
+            background: var(--blue-accent);
+            color: white;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 0.75rem;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row .label {
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        .price-row .value {
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+        }
+
+        .price-row.total {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 2px solid;
+            border-bottom: none;
+            font-size: 0.85rem;
+        }
+
+        .chart-col.col-1 .price-row.total {
+            border-color: var(--amber);
+        }
+
+        .chart-col.col-2 .price-row.total {
+            border-color: var(--forest-deep);
+        }
+
+        .chart-col.col-3 .price-row.total {
+            border-color: var(--blue-accent);
+        }
+
+        .price-row.total .value {
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .chart-col.col-1 .price-row.total .value {
+            color: var(--amber);
+        }
+
+        .chart-col.col-2 .price-row.total .value {
+            color: var(--forest-deep);
+        }
+
+        .chart-col.col-3 .price-row.total .value {
+            color: var(--blue-accent);
+        }
+
+        .recommend-badge {
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            background: var(--forest-deep);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 0 14px 0 14px;
+            font-size: 0.68rem;
+            font-weight: 800;
+        }
+
+        /* ===== フッター ===== */
+        .page-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+            padding-top: 10px;
+            border-top: 1.5px solid var(--border);
+            font-size: 0.68rem;
+            color: var(--text-sub);
+        }
+
+        .page-footer .contact {
+            display: flex;
+            gap: 16px;
+        }
+
+        .page-footer .contact span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* ===== ユーティリティ ===== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 8px;
+        }
+
+        .mt-3 {
+            margin-top: 12px;
+        }
+
+        /* 印刷プレビューボタン */
+        .print-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-light));
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(6, 78, 59, 0.3);
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .print-btn:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== 印刷ボタン（画面のみ） ===== -->
+    <button class="print-btn no-print" onclick="window.print()">🖨️ PDF出力 / 印刷</button>
+
+    <!-- ===== ページ1: メイン比較チャートマップ ===== -->
+    <div class="page" id="page1">
+
+        <!-- ヘッダー -->
+        <div class="page-header">
+            <div class="logo-area">
+                <div class="logo-icon">ECC</div>
+                <div class="logo-text">
+                    <h1>2026年度 新授業料のご案内</h1>
+                    <p>ECCベストワン 藍住校・北島中央校</p>
+                </div>
+            </div>
+            <div class="header-badge">2026年4月〜 適用</div>
+        </div>
+
+        <!-- セクション: ごあいさつ -->
+        <div
+            style="background: var(--sage); border-radius: 12px; padding: 12px 18px; margin-bottom: 16px; font-size: 0.78rem; color: var(--text-main); line-height: 1.7;">
+            保護者の皆さまには、日頃よりECCベストワンの教育にご理解・ご協力を賜り、誠にありがとうございます。
+            2026年度より、<strong>学習品質のさらなる向上</strong>を目指し、授業料の一部改定を実施いたします。
+            改定にあたり「<strong style="color: var(--amber);">学習サポート費</strong>」を新たに導入し、
+            <strong>専用学習アプリ</strong>や<strong>個別カリキュラム最適化</strong>など、サービスの充実を図ります。
+        </div>
+
+        <!-- チャートマップ: 週1/2/3コマ比較 -->
+        <div class="section-title">
+            <div class="icon">📊</div>
+            <h2>コマ数別 新授業料チャートマップ（中学生）</h2>
+        </div>
+
+        <div class="chart-map">
+            <!-- 週1コマ -->
+            <div class="chart-col col-1">
+                <div class="chart-col-header">
+                    <h3>週1コマ</h3>
+                    <span class="col-badge">1教科集中型</span>
+                </div>
+
+                <div
+                    style="font-size: 0.72rem; color: var(--text-sub); margin-bottom: 8px; text-align: center; font-style: italic;">
+                    旧料金体系 → 新料金体系
+                </div>
+
+                <!-- 中1・中2 -->
+                <div style="font-size: 0.7rem; font-weight: 700; color: var(--amber); margin-bottom: 4px;">▼ 中1・中2</div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥16,700</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,598</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥24,898</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥20,300</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,598</span>
+                </div>
+
+                <!-- 中3 -->
+                <div
+                    style="font-size: 0.7rem; font-weight: 700; color: var(--amber); margin-top: 10px; margin-bottom: 4px;">
+                    ▼ 中3</div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥17,545</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,840</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥25,985</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥21,145</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,840</span>
+                </div>
+            </div>
+
+            <!-- 週2コマ -->
+            <div class="chart-col col-2">
+                <span class="recommend-badge">おすすめ</span>
+                <div class="chart-col-header">
+                    <h3>週2コマ</h3>
+                    <span class="col-badge">2教科バランス型</span>
+                </div>
+
+                <div
+                    style="font-size: 0.72rem; color: var(--text-sub); margin-bottom: 8px; text-align: center; font-style: italic;">
+                    旧料金体系 → 新料金体系
+                </div>
+
+                <!-- 中1・中2 -->
+                <div style="font-size: 0.7rem; font-weight: 700; color: var(--forest-deep); margin-bottom: 4px;">▼ 中1・中2
+                </div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥33,400</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,598</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥41,598</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥37,000</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,598</span>
+                </div>
+
+                <!-- 中3 -->
+                <div
+                    style="font-size: 0.7rem; font-weight: 700; color: var(--forest-deep); margin-top: 10px; margin-bottom: 4px;">
+                    ▼ 中3</div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥35,090</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,840</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥43,530</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥38,690</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,840</span>
+                </div>
+            </div>
+
+            <!-- 週3コマ -->
+            <div class="chart-col col-3">
+                <div class="chart-col-header">
+                    <h3>週3コマ</h3>
+                    <span class="col-badge">3教科徹底型</span>
+                </div>
+
+                <div
+                    style="font-size: 0.72rem; color: var(--text-sub); margin-bottom: 8px; text-align: center; font-style: italic;">
+                    旧料金体系 → 新料金体系
+                </div>
+
+                <!-- 中1・中2 -->
+                <div style="font-size: 0.7rem; font-weight: 700; color: var(--blue-accent); margin-bottom: 4px;">▼ 中1・中2
+                </div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥50,100</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,598</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥58,298</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥53,700</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,598</span>
+                </div>
+
+                <!-- 中3 -->
+                <div
+                    style="font-size: 0.7rem; font-weight: 700; color: var(--blue-accent); margin-top: 10px; margin-bottom: 4px;">
+                    ▼ 中3</div>
+                <div class="price-row">
+                    <span class="label">授業料</span>
+                    <span class="value">¥52,635</span>
+                </div>
+                <div class="price-row">
+                    <span class="label" style="color: var(--amber); font-weight: 600;">学習サポート費
+                        <small>(NEW)</small></span>
+                    <span class="value" style="color: var(--amber);">¥4,840</span>
+                </div>
+                <div class="price-row">
+                    <span class="label">維持費・諸経費</span>
+                    <span class="value">¥3,600</span>
+                </div>
+                <div class="price-row total">
+                    <span class="label">月額合計</span>
+                    <span class="value">¥61,075</span>
+                </div>
+                <div style="text-align: right; font-size: 0.68rem; color: var(--text-light); margin-top: 2px;">
+                    旧: <span style="text-decoration: line-through;">¥56,235</span> → <span class="diff-price"
+                        style="font-size: 0.7rem;">+¥4,840</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 週1コマ特別ハイライト -->
+        <div class="weekly1-highlight">
+            <div class="weekly1-content">
+                <div class="weekly1-desc">
+                    <h3>「学習サポート費」で、週1コマでも最高品質の学びを</h3>
+                    <p>
+                        週1コマの授業でも、学習サポート費の導入により<strong>学習サポートが大幅に強化</strong>されます。
+                        授業時間以外でもお子さまの学習を見守る仕組みが整い、<strong>コストパフォーマンスの向上</strong>を実現します。
+                    </p>
+                    <div
+                        style="background: var(--white); border-radius: 6px; padding: 6px 10px; margin-top: 6px; border: 1.5px solid var(--amber-light);">
+                        <p style="font-size: 0.65rem; color: var(--text-main); line-height: 1.4; margin: 0;">
+                            <strong style="color: var(--amber);">🇬🇧 英検・英語専科の方にも最適！</strong><br>
+                            週１コマで<strong>英検対策・英語力強化</strong>に取り組む生徒さんも多数在籍。
+                            ECCならではの英語指導ノウハウに加え、専用アプリでの<strong>単語・リスニング学習</strong>や
+                            個別カリキュラムで<strong>目標級の合格</strong>をサポートします。
+                        </p>
+                    </div>
+                </div>
+                <div class="weekly1-merits">
+                    <div class="weekly1-merit-item">
+                        <span class="merit-emoji">📱</span>
+                        <span>自社専用アプリで<br>家庭学習をサポート</span>
+                    </div>
+                    <div class="weekly1-merit-item">
+                        <span class="merit-emoji">🔄</span>
+                        <span>振替・補講の<br>柔軟対応</span>
+                    </div>
+                    <div class="weekly1-merit-item">
+                        <span class="merit-emoji">🎯</span>
+                        <span>個別カリキュラムの<br>最適化</span>
+                    </div>
+                    <div class="weekly1-merit-item">
+                        <span class="merit-emoji">📝</span>
+                        <span>テスト対策＆<br>学習管理サポート</span>
+                    </div>
+                    <div class="weekly1-merit-item" style="grid-column: 1 / -1; justify-content: center;">
+                        <span class="merit-emoji">🗓️</span>
+                        <span>月1回の学習アドバイス授業を実施</span>
+                    </div>
+                    <div class="weekly1-merit-item" style="grid-column: 1 / -1; justify-content: center;">
+                        <span class="merit-emoji">🏅</span>
+                        <span>ECC英検対策プログラム対応（英検3級〜準1級）</span>
+                    </div>
+                </div>
+            </div>
+            <!-- アップグレード特典 -->
+            <div
+                style="margin-top: 10px; background: linear-gradient(135deg, #fef3c7, #fff7ed); border: 2px solid #f59e0b; border-radius: 10px; padding: 10px 14px; position: relative;">
+                <div
+                    style="position: absolute; top: -10px; right: 14px; background: linear-gradient(135deg, #ef4444, #dc2626); color: white; padding: 2px 12px; border-radius: 12px; font-size: 0.65rem; font-weight: 800;">
+                    🎁 期間限定特典</div>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div
+                        style="flex-shrink: 0; width: 50px; height: 50px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; font-weight: 900;">
+                        UP</div>
+                    <div>
+                        <p style="font-size: 0.78rem; font-weight: 800; color: #92400e; margin: 0 0 3px 0;">
+                            週2コマ・3コマへアップグレードで<span style="color: #dc2626; font-size: 0.88rem;">旧価格を半年間適用！</span>
+                        </p>
+                        <p style="font-size: 0.65rem; color: #78716c; margin: 0; line-height: 1.4;">
+                            この機会に受講コマ数の追加をご検討の方は、<strong>学習サポート費なしの旧授業料</strong>を9月まで半年間そのまま適用いたします。教科を増やして総合力をアップするチャンスです！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- フッター -->
+        <div class="page-footer">
+            <span>※上記金額はすべて税込です。</span>
+            <div class="contact">
+                <span>📍 藍住校・北島中央校</span>
+                <span>📞 お問い合わせは各校舎まで</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ページ2: メリット詳細・まとめ ===== -->
+    <div class="page" id="page2">
+
+        <!-- ヘッダー -->
+        <div class="page-header">
+            <div class="logo-area">
+                <div class="logo-icon">ECC</div>
+                <div class="logo-text">
+                    <h1>学習サポート費で広がる学びの可能性</h1>
+                    <p>ECCベストワン 藍住校・北島中央校</p>
+                </div>
+            </div>
+            <div class="header-badge">サービス拡充のご案内</div>
+        </div>
+
+        <!-- 学習サポート費とは -->
+        <div class="section-title">
+            <div class="icon">💡</div>
+            <h2>「学習サポート費」とは？ — 学習品質を高めるための投資</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; margin-bottom: 12px;">
+            <div
+                style="background: var(--sage); border-radius: 12px; padding: 12px; font-size: 0.68rem; line-height: 1.6; color: var(--text-main);">
+                <p>
+                    「学習サポート費」は、<strong>授業そのものの品質向上</strong>と<strong>授業外の学習サポート</strong>を実現するために
+                    新たに導入する費用です。<br><br>
+                    これまでの授業料だけではカバーしきれなかった、以下のサービスを<strong>すべてのコース（週1コマ〜）</strong>でご利用いただけます。
+                </p>
+                <div class="note-box mt-2" style="background: var(--white);">
+                    <strong>💰 週1コマでも同等のサービス</strong><br>
+                    学習サポート費はコマ数に関わらず定額のため、週1コマの方こそ「お得感」が最も大きくなります。
+                </div>
+                <div
+                    style="background: linear-gradient(135deg, #fef3c7, #fffbeb); border-radius: 8px; padding: 8px 10px; margin-top: 6px; border: 1.5px solid var(--amber);">
+                    <strong style="color: #b45309; font-size: 0.65rem;">🗓️ 月1回の学習アドバイス授業</strong>
+                    <p style="font-size: 0.6rem; color: var(--text-main); line-height: 1.4; margin: 2px 0 0 0;">
+                        受講科目だけでなく、<strong>全教科の学習法アドバイス</strong>や<strong>進路・志望校相談</strong>にも対応。
+                        定期テストの振り返りや高校受験に向けた学習計画まで、お子さまの成長を<strong>統合的にサポート</strong>します。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 旧→新 フロー図 -->
+            <div class="flow-section" style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="flow-card old" style="flex: 1;">
+                    <h3>😐 これまで（旧体系）</h3>
+                    <ul style="font-size: 0.62rem; color: var(--text-sub); padding-left: 14px; line-height: 1.6;">
+                        <li>授業中のみの指導</li>
+                        <li>画一的なカリキュラム</li>
+                        <li>テスト前の追加指導は別料金</li>
+                    </ul>
+                </div>
+                <div style="text-align: center; font-size: 1.2rem; color: var(--amber); font-weight: 900;">⬇️</div>
+                <div class="flow-card new" style="flex: 1;">
+                    <h3>🎉 これから（新体系）</h3>
+                    <ul
+                        style="font-size: 0.62rem; color: var(--forest-deep); padding-left: 14px; line-height: 1.6; font-weight: 600;">
+                        <li>専用アプリでの家庭学習サポート</li>
+                        <li>一人ひとりに最適化されたカリキュラム</li>
+                        <li>テスト対策が標準サービスに</li>
+                        <li>月1回の学習アドバイス授業</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- メリット詳細グリッド -->
+        <div class="section-title">
+            <div class="icon">✨</div>
+            <h2>学習サポート費に含まれる4つの新サービス</h2>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">📱</div>
+                <h4>自社専用学習アプリ</h4>
+                <p>
+                    お子さまの学習進捗をリアルタイムで確認。
+                    宿題管理・理解度チェック・保護者通知機能を搭載。
+                    授業外の「見えない学習」を可視化します。
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🎯</div>
+                <h4>個別カリキュラム最適化</h4>
+                <p>
+                    学力診断テスト・定期テスト結果をもとに、
+                    一人ひとりに合わせた学習計画を策定。
+                    「今やるべきこと」を明確にします。
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">📝</div>
+                <h4>テスト対策＆学習管理</h4>
+                <p>
+                    定期テスト前の重点対策授業を追加費用なしで実施。
+                    学習スケジュール管理・目標設定サポートを
+                    標準サービスとして提供します。
+                </p>
+            </div>
+            <div class="benefit-card">
+                <div class="benefit-icon">🗓️</div>
+                <h4>月1回 学習アドバイス授業</h4>
+                <p>
+                    受講科目に限らず、全教科の学習法・進路相談まで対応。
+                    定期テスト分析や志望校対策を含む統合サポートで、
+                    お子さまの「次の一歩」を明確にします。
+                </p>
+            </div>
+        </div>
+
+        <div class="note-box" style="margin-top: 14px; background: #f0f9ff; border-left-color: var(--blue-accent);">
+            <strong style="color: var(--blue-accent);">👨‍🏫 特能講師の指名について（受験生限定）：</strong>
+            中3・高3の受験生を対象に、指導力・コミュニケーション力で厳選された「特能認定講師」の専任指名を承っております。
+            ご希望の方は<strong>別途オプション料金</strong>にて対応いたします。詳しくはお気軽にお問い合わせください。
+        </div>
+
+        <!-- まとめ比較表 -->
+        <div class="section-title mt-3">
+            <div class="icon">📋</div>
+            <h2>改定前後 授業料一覧（中学生・全コマ数）</h2>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>学年</th>
+                        <th>コマ数</th>
+                        <th>旧月額合計</th>
+                        <th>学習サポート費</th>
+                        <th>新月額合計</th>
+                        <th>差額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">中1・中2</td>
+                        <td>週1コマ</td>
+                        <td class="old-price">¥20,300</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,598</td>
+                        <td class="new-price">¥24,898</td>
+                        <td class="diff-price">¥4,598</td>
+                    </tr>
+                    <tr>
+                        <td>週2コマ</td>
+                        <td class="old-price">¥37,000</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,598</td>
+                        <td class="new-price">¥41,598</td>
+                        <td class="diff-price">¥4,598</td>
+                    </tr>
+                    <tr>
+                        <td>週3コマ</td>
+                        <td class="old-price">¥53,700</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,598</td>
+                        <td class="new-price">¥58,298</td>
+                        <td class="diff-price">¥4,598</td>
+                    </tr>
+                    <tr style="background: var(--sage);">
+                        <td rowspan="3">中3</td>
+                        <td>週1コマ</td>
+                        <td class="old-price">¥21,145</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,840</td>
+                        <td class="new-price">¥25,985</td>
+                        <td class="diff-price">¥4,840</td>
+                    </tr>
+                    <tr style="background: var(--sage);">
+                        <td>週2コマ</td>
+                        <td class="old-price">¥38,690</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,840</td>
+                        <td class="new-price">¥43,530</td>
+                        <td class="diff-price">¥4,840</td>
+                    </tr>
+                    <tr style="background: var(--sage);">
+                        <td>週3コマ</td>
+                        <td class="old-price">¥56,235</td>
+                        <td style="color: var(--amber); font-weight: 700;">¥4,840</td>
+                        <td class="new-price">¥61,075</td>
+                        <td class="diff-price">¥4,840</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note-box">
+            <strong>📌 ポイント：</strong>
+            学習サポート費はコマ数に関わらず一律です。つまり、<strong>週1コマの方ほど相対的なサービス充実度が高く</strong>なります。
+            これまで週1コマでは実現できなかった手厚いサポートが、改定後は標準付帯されます。
+        </div>
+
+        <!-- フッター -->
+        <div class="page-footer">
+            <span>© 2026 ECCベストワン藍住・北島中央　※記載の料金はすべて税込です。</span>
+            <div class="contact">
+                <span>📍 藍住校・北島中央校</span>
+                <span>📞 お問い合わせは各校舎まで</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
